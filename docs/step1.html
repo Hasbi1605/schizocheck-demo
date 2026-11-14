@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Pertanyaan 1 dari 6 - SchizoCheck</title>
+  <meta name="description" content="Screening Gejala Skizofrenia">
+  <meta name="keywords" content="">
+
+  <link href="frontend/assets/img/favicon.png" rel="icon">
+  <link href="frontend/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="frontend/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="frontend/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="frontend/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <link href="frontend/assets/css/main.css" rel="stylesheet">
+  
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+    }
+    
+    .screening-header {
+      background: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+    
+    .screening-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--heading-color);
+    }
+    
+    .screening-logo svg {
+      width: 32px;
+      height: 32px;
+      color: var(--accent-color);
+    }
+    
+    .screening-logo h1 {
+      font-size: 1.3rem;
+      margin: 0;
+      font-weight: 700;
+    }
+    
+    .main-content {
+      padding-top: 80px;
+      padding-bottom: 40px;
+      min-height: 100vh;
+    }
+    
+    .exit-btn {
+      color: #6c757d;
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.3s;
+    }
+    
+    .exit-btn:hover {
+      color: var(--accent-color);
+    }
+  </style>
+</head>
+
+<body class="screening-page">
+
+  <!-- Minimal Header -->
+  <header class="screening-header">
+    <div class="container d-flex justify-content-center align-items-center">
+      <a href="" class="screening-logo" onclick="return confirm('Apakah Anda yakin ingin keluar? Progress screening tidak akan disimpan.')">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 22L2 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+          <path d="M17 22V6C17 4.11438 17 3.17157 16.4142 2.58579C15.8284 2 14.8856 2 13 2H11C9.11438 2 8.17157 2 7.58579 2.58579C7 3.17157 7 4.11438 7 6V22" stroke="currentColor" stroke-width="1.5"></path>
+        </svg>
+        <h1>SchizoCheck</h1>
+      </a>
+    </div>
+  </header>
+
+  <main class="main-content">
+    
+<div class="container">
+
+  <!-- Progress Section -->
+  <div class="row justify-content-center mb-4">
+    <div class="col-lg-8 col-xl-6">
+      <div class="progress-card p-4 bg-white rounded-4 shadow-sm">
+        
+        <!-- Progress Text -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <span class="fw-bold" style="color: var(--accent-color); font-size: 1.1rem;">
+              Pertanyaan 1 dari 6
+            </span>
+          </div>
+          <span class="badge rounded-pill px-3 py-2" style="background-color: var(--accent-color);">
+            17%
+          </span>
+        </div>
+        
+        <!-- Progress Bar -->
+        <div class="progress mb-4" style="height: 8px; border-radius: 4px; background-color: #e9ecef;">
+          <div class="progress-bar" role="progressbar" 
+               style="width: 16.666666666667%; background-color: var(--accent-color); border-radius: 4px;" 
+               aria-valuenow="16.666666666667" 
+               aria-valuemin="0" 
+               aria-valuemax="100"></div>
+        </div>
+        
+        <!-- Step Dots -->
+        <div class="step-dots d-flex justify-content-between">
+                      <div class="step-dot-wrapper text-center flex-fill">
+              <div class="step-dot mx-auto  current">
+                                  1
+                              </div>
+            </div>
+                      <div class="step-dot-wrapper text-center flex-fill">
+              <div class="step-dot mx-auto  ">
+                                  2
+                              </div>
+            </div>
+                      <div class="step-dot-wrapper text-center flex-fill">
+              <div class="step-dot mx-auto  ">
+                                  3
+                              </div>
+            </div>
+                      <div class="step-dot-wrapper text-center flex-fill">
+              <div class="step-dot mx-auto  ">
+                                  4
+                              </div>
+            </div>
+                      <div class="step-dot-wrapper text-center flex-fill">
+              <div class="step-dot mx-auto  ">
+                                  5
+                              </div>
+            </div>
+                      <div class="step-dot-wrapper text-center flex-fill">
+              <div class="step-dot mx-auto  ">
+                                  6
+                              </div>
+            </div>
+                  </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Questions Form -->
+  <form action="index.html" method="POST" id="questionForm">
+    <input type="hidden" name="_token" value="4BTCuoZUINItFvebDsClrW5e6RLuWHK9YVH1miVj" autocomplete="off">    <input type="hidden" name="step" value="1">
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-xl-6">
+        
+                  <div class="question-card mb-4 p-4 bg-white rounded-4 shadow-sm">
+            
+            <!-- Question Header -->
+            <div class="question-header d-flex align-items-start mb-3">
+              <span class="question-number me-3">
+                1
+              </span>
+              <h5 class="question-text mb-0">Mendengar suara atau bisikan yang tidak didengar orang lain</h5>
+            </div>
+            
+            <!-- Answer Options -->
+            <div class="answer-section mt-4">
+              <p class="text-muted small mb-3">
+                <i class="bi bi-info-circle me-1"></i>
+                Seberapa sering Anda mengalami hal ini?
+              </p>
+              
+              <div class="answer-grid">
+                                
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G01]" 
+                           id="G01_tidak" 
+                           value="tidak"
+                           
+                           required>
+                    <label class="answer-label" for="G01_tidak">
+                      <i class="bi bi-x-circle"></i>
+                      <span class="label-text">Tidak Pernah</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G01]" 
+                           id="G01_tidak_tahu" 
+                           value="tidak_tahu"
+                           
+                           required>
+                    <label class="answer-label" for="G01_tidak_tahu">
+                      <i class="bi bi-question-circle"></i>
+                      <span class="label-text">Tidak Yakin</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G01]" 
+                           id="G01_sedikit_yakin" 
+                           value="sedikit_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G01_sedikit_yakin">
+                      <i class="bi bi-dash-circle"></i>
+                      <span class="label-text">Jarang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G01]" 
+                           id="G01_cukup_yakin" 
+                           value="cukup_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G01_cukup_yakin">
+                      <i class="bi bi-circle-half"></i>
+                      <span class="label-text">Kadang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G01]" 
+                           id="G01_yakin" 
+                           value="yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G01_yakin">
+                      <i class="bi bi-circle-fill"></i>
+                      <span class="label-text">Sering</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G01]" 
+                           id="G01_sangat_yakin" 
+                           value="sangat_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G01_sangat_yakin">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="label-text">Selalu</span>
+                    </label>
+                  </div>
+                              </div>
+            </div>
+          </div>
+                  <div class="question-card mb-4 p-4 bg-white rounded-4 shadow-sm">
+            
+            <!-- Question Header -->
+            <div class="question-header d-flex align-items-start mb-3">
+              <span class="question-number me-3">
+                2
+              </span>
+              <h5 class="question-text mb-0">Melihat bayangan atau sosok yang tidak nyata</h5>
+            </div>
+            
+            <!-- Answer Options -->
+            <div class="answer-section mt-4">
+              <p class="text-muted small mb-3">
+                <i class="bi bi-info-circle me-1"></i>
+                Seberapa sering Anda mengalami hal ini?
+              </p>
+              
+              <div class="answer-grid">
+                                
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G02]" 
+                           id="G02_tidak" 
+                           value="tidak"
+                           
+                           required>
+                    <label class="answer-label" for="G02_tidak">
+                      <i class="bi bi-x-circle"></i>
+                      <span class="label-text">Tidak Pernah</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G02]" 
+                           id="G02_tidak_tahu" 
+                           value="tidak_tahu"
+                           
+                           required>
+                    <label class="answer-label" for="G02_tidak_tahu">
+                      <i class="bi bi-question-circle"></i>
+                      <span class="label-text">Tidak Yakin</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G02]" 
+                           id="G02_sedikit_yakin" 
+                           value="sedikit_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G02_sedikit_yakin">
+                      <i class="bi bi-dash-circle"></i>
+                      <span class="label-text">Jarang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G02]" 
+                           id="G02_cukup_yakin" 
+                           value="cukup_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G02_cukup_yakin">
+                      <i class="bi bi-circle-half"></i>
+                      <span class="label-text">Kadang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G02]" 
+                           id="G02_yakin" 
+                           value="yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G02_yakin">
+                      <i class="bi bi-circle-fill"></i>
+                      <span class="label-text">Sering</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G02]" 
+                           id="G02_sangat_yakin" 
+                           value="sangat_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G02_sangat_yakin">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="label-text">Selalu</span>
+                    </label>
+                  </div>
+                              </div>
+            </div>
+          </div>
+                  <div class="question-card mb-4 p-4 bg-white rounded-4 shadow-sm">
+            
+            <!-- Question Header -->
+            <div class="question-header d-flex align-items-start mb-3">
+              <span class="question-number me-3">
+                3
+              </span>
+              <h5 class="question-text mb-0">Merasa diawasi, dimata-matai, atau diikuti orang lain</h5>
+            </div>
+            
+            <!-- Answer Options -->
+            <div class="answer-section mt-4">
+              <p class="text-muted small mb-3">
+                <i class="bi bi-info-circle me-1"></i>
+                Seberapa sering Anda mengalami hal ini?
+              </p>
+              
+              <div class="answer-grid">
+                                
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G03]" 
+                           id="G03_tidak" 
+                           value="tidak"
+                           
+                           required>
+                    <label class="answer-label" for="G03_tidak">
+                      <i class="bi bi-x-circle"></i>
+                      <span class="label-text">Tidak Pernah</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G03]" 
+                           id="G03_tidak_tahu" 
+                           value="tidak_tahu"
+                           
+                           required>
+                    <label class="answer-label" for="G03_tidak_tahu">
+                      <i class="bi bi-question-circle"></i>
+                      <span class="label-text">Tidak Yakin</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G03]" 
+                           id="G03_sedikit_yakin" 
+                           value="sedikit_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G03_sedikit_yakin">
+                      <i class="bi bi-dash-circle"></i>
+                      <span class="label-text">Jarang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G03]" 
+                           id="G03_cukup_yakin" 
+                           value="cukup_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G03_cukup_yakin">
+                      <i class="bi bi-circle-half"></i>
+                      <span class="label-text">Kadang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G03]" 
+                           id="G03_yakin" 
+                           value="yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G03_yakin">
+                      <i class="bi bi-circle-fill"></i>
+                      <span class="label-text">Sering</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G03]" 
+                           id="G03_sangat_yakin" 
+                           value="sangat_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G03_sangat_yakin">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="label-text">Selalu</span>
+                    </label>
+                  </div>
+                              </div>
+            </div>
+          </div>
+                  <div class="question-card mb-4 p-4 bg-white rounded-4 shadow-sm">
+            
+            <!-- Question Header -->
+            <div class="question-header d-flex align-items-start mb-3">
+              <span class="question-number me-3">
+                4
+              </span>
+              <h5 class="question-text mb-0">Merasa pikiran dikendalikan atau dibaca orang lain</h5>
+            </div>
+            
+            <!-- Answer Options -->
+            <div class="answer-section mt-4">
+              <p class="text-muted small mb-3">
+                <i class="bi bi-info-circle me-1"></i>
+                Seberapa sering Anda mengalami hal ini?
+              </p>
+              
+              <div class="answer-grid">
+                                
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G04]" 
+                           id="G04_tidak" 
+                           value="tidak"
+                           
+                           required>
+                    <label class="answer-label" for="G04_tidak">
+                      <i class="bi bi-x-circle"></i>
+                      <span class="label-text">Tidak Pernah</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G04]" 
+                           id="G04_tidak_tahu" 
+                           value="tidak_tahu"
+                           
+                           required>
+                    <label class="answer-label" for="G04_tidak_tahu">
+                      <i class="bi bi-question-circle"></i>
+                      <span class="label-text">Tidak Yakin</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G04]" 
+                           id="G04_sedikit_yakin" 
+                           value="sedikit_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G04_sedikit_yakin">
+                      <i class="bi bi-dash-circle"></i>
+                      <span class="label-text">Jarang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G04]" 
+                           id="G04_cukup_yakin" 
+                           value="cukup_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G04_cukup_yakin">
+                      <i class="bi bi-circle-half"></i>
+                      <span class="label-text">Kadang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G04]" 
+                           id="G04_yakin" 
+                           value="yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G04_yakin">
+                      <i class="bi bi-circle-fill"></i>
+                      <span class="label-text">Sering</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G04]" 
+                           id="G04_sangat_yakin" 
+                           value="sangat_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G04_sangat_yakin">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="label-text">Selalu</span>
+                    </label>
+                  </div>
+                              </div>
+            </div>
+          </div>
+                  <div class="question-card mb-4 p-4 bg-white rounded-4 shadow-sm">
+            
+            <!-- Question Header -->
+            <div class="question-header d-flex align-items-start mb-3">
+              <span class="question-number me-3">
+                5
+              </span>
+              <h5 class="question-text mb-0">Merasa memiliki kekuatan super atau menjadi utusan khusus</h5>
+            </div>
+            
+            <!-- Answer Options -->
+            <div class="answer-section mt-4">
+              <p class="text-muted small mb-3">
+                <i class="bi bi-info-circle me-1"></i>
+                Seberapa sering Anda mengalami hal ini?
+              </p>
+              
+              <div class="answer-grid">
+                                
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G05]" 
+                           id="G05_tidak" 
+                           value="tidak"
+                           
+                           required>
+                    <label class="answer-label" for="G05_tidak">
+                      <i class="bi bi-x-circle"></i>
+                      <span class="label-text">Tidak Pernah</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G05]" 
+                           id="G05_tidak_tahu" 
+                           value="tidak_tahu"
+                           
+                           required>
+                    <label class="answer-label" for="G05_tidak_tahu">
+                      <i class="bi bi-question-circle"></i>
+                      <span class="label-text">Tidak Yakin</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G05]" 
+                           id="G05_sedikit_yakin" 
+                           value="sedikit_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G05_sedikit_yakin">
+                      <i class="bi bi-dash-circle"></i>
+                      <span class="label-text">Jarang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G05]" 
+                           id="G05_cukup_yakin" 
+                           value="cukup_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G05_cukup_yakin">
+                      <i class="bi bi-circle-half"></i>
+                      <span class="label-text">Kadang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G05]" 
+                           id="G05_yakin" 
+                           value="yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G05_yakin">
+                      <i class="bi bi-circle-fill"></i>
+                      <span class="label-text">Sering</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G05]" 
+                           id="G05_sangat_yakin" 
+                           value="sangat_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G05_sangat_yakin">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="label-text">Selalu</span>
+                    </label>
+                  </div>
+                              </div>
+            </div>
+          </div>
+                  <div class="question-card mb-4 p-4 bg-white rounded-4 shadow-sm">
+            
+            <!-- Question Header -->
+            <div class="question-header d-flex align-items-start mb-3">
+              <span class="question-number me-3">
+                6
+              </span>
+              <h5 class="question-text mb-0">Merasa pikiran bergema di dalam kepala</h5>
+            </div>
+            
+            <!-- Answer Options -->
+            <div class="answer-section mt-4">
+              <p class="text-muted small mb-3">
+                <i class="bi bi-info-circle me-1"></i>
+                Seberapa sering Anda mengalami hal ini?
+              </p>
+              
+              <div class="answer-grid">
+                                
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G18]" 
+                           id="G18_tidak" 
+                           value="tidak"
+                           
+                           required>
+                    <label class="answer-label" for="G18_tidak">
+                      <i class="bi bi-x-circle"></i>
+                      <span class="label-text">Tidak Pernah</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G18]" 
+                           id="G18_tidak_tahu" 
+                           value="tidak_tahu"
+                           
+                           required>
+                    <label class="answer-label" for="G18_tidak_tahu">
+                      <i class="bi bi-question-circle"></i>
+                      <span class="label-text">Tidak Yakin</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G18]" 
+                           id="G18_sedikit_yakin" 
+                           value="sedikit_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G18_sedikit_yakin">
+                      <i class="bi bi-dash-circle"></i>
+                      <span class="label-text">Jarang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G18]" 
+                           id="G18_cukup_yakin" 
+                           value="cukup_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G18_cukup_yakin">
+                      <i class="bi bi-circle-half"></i>
+                      <span class="label-text">Kadang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G18]" 
+                           id="G18_yakin" 
+                           value="yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G18_yakin">
+                      <i class="bi bi-circle-fill"></i>
+                      <span class="label-text">Sering</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G18]" 
+                           id="G18_sangat_yakin" 
+                           value="sangat_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G18_sangat_yakin">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="label-text">Selalu</span>
+                    </label>
+                  </div>
+                              </div>
+            </div>
+          </div>
+                  <div class="question-card mb-4 p-4 bg-white rounded-4 shadow-sm">
+            
+            <!-- Question Header -->
+            <div class="question-header d-flex align-items-start mb-3">
+              <span class="question-number me-3">
+                7
+              </span>
+              <h5 class="question-text mb-0">Merasa ada pikiran asing yang disisipkan ke dalam kepala</h5>
+            </div>
+            
+            <!-- Answer Options -->
+            <div class="answer-section mt-4">
+              <p class="text-muted small mb-3">
+                <i class="bi bi-info-circle me-1"></i>
+                Seberapa sering Anda mengalami hal ini?
+              </p>
+              
+              <div class="answer-grid">
+                                
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G19]" 
+                           id="G19_tidak" 
+                           value="tidak"
+                           
+                           required>
+                    <label class="answer-label" for="G19_tidak">
+                      <i class="bi bi-x-circle"></i>
+                      <span class="label-text">Tidak Pernah</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G19]" 
+                           id="G19_tidak_tahu" 
+                           value="tidak_tahu"
+                           
+                           required>
+                    <label class="answer-label" for="G19_tidak_tahu">
+                      <i class="bi bi-question-circle"></i>
+                      <span class="label-text">Tidak Yakin</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G19]" 
+                           id="G19_sedikit_yakin" 
+                           value="sedikit_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G19_sedikit_yakin">
+                      <i class="bi bi-dash-circle"></i>
+                      <span class="label-text">Jarang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G19]" 
+                           id="G19_cukup_yakin" 
+                           value="cukup_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G19_cukup_yakin">
+                      <i class="bi bi-circle-half"></i>
+                      <span class="label-text">Kadang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G19]" 
+                           id="G19_yakin" 
+                           value="yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G19_yakin">
+                      <i class="bi bi-circle-fill"></i>
+                      <span class="label-text">Sering</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G19]" 
+                           id="G19_sangat_yakin" 
+                           value="sangat_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G19_sangat_yakin">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="label-text">Selalu</span>
+                    </label>
+                  </div>
+                              </div>
+            </div>
+          </div>
+                  <div class="question-card mb-4 p-4 bg-white rounded-4 shadow-sm">
+            
+            <!-- Question Header -->
+            <div class="question-header d-flex align-items-start mb-3">
+              <span class="question-number me-3">
+                8
+              </span>
+              <h5 class="question-text mb-0">Merasa pikiran dicuri atau ditarik keluar dari kepala</h5>
+            </div>
+            
+            <!-- Answer Options -->
+            <div class="answer-section mt-4">
+              <p class="text-muted small mb-3">
+                <i class="bi bi-info-circle me-1"></i>
+                Seberapa sering Anda mengalami hal ini?
+              </p>
+              
+              <div class="answer-grid">
+                                
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G20]" 
+                           id="G20_tidak" 
+                           value="tidak"
+                           
+                           required>
+                    <label class="answer-label" for="G20_tidak">
+                      <i class="bi bi-x-circle"></i>
+                      <span class="label-text">Tidak Pernah</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G20]" 
+                           id="G20_tidak_tahu" 
+                           value="tidak_tahu"
+                           
+                           required>
+                    <label class="answer-label" for="G20_tidak_tahu">
+                      <i class="bi bi-question-circle"></i>
+                      <span class="label-text">Tidak Yakin</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G20]" 
+                           id="G20_sedikit_yakin" 
+                           value="sedikit_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G20_sedikit_yakin">
+                      <i class="bi bi-dash-circle"></i>
+                      <span class="label-text">Jarang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G20]" 
+                           id="G20_cukup_yakin" 
+                           value="cukup_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G20_cukup_yakin">
+                      <i class="bi bi-circle-half"></i>
+                      <span class="label-text">Kadang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G20]" 
+                           id="G20_yakin" 
+                           value="yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G20_yakin">
+                      <i class="bi bi-circle-fill"></i>
+                      <span class="label-text">Sering</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G20]" 
+                           id="G20_sangat_yakin" 
+                           value="sangat_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G20_sangat_yakin">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="label-text">Selalu</span>
+                    </label>
+                  </div>
+                              </div>
+            </div>
+          </div>
+                  <div class="question-card mb-4 p-4 bg-white rounded-4 shadow-sm">
+            
+            <!-- Question Header -->
+            <div class="question-header d-flex align-items-start mb-3">
+              <span class="question-number me-3">
+                9
+              </span>
+              <h5 class="question-text mb-0">Merasa pikiran disiarkan sehingga orang lain tahu isi pikiran</h5>
+            </div>
+            
+            <!-- Answer Options -->
+            <div class="answer-section mt-4">
+              <p class="text-muted small mb-3">
+                <i class="bi bi-info-circle me-1"></i>
+                Seberapa sering Anda mengalami hal ini?
+              </p>
+              
+              <div class="answer-grid">
+                                
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G21]" 
+                           id="G21_tidak" 
+                           value="tidak"
+                           
+                           required>
+                    <label class="answer-label" for="G21_tidak">
+                      <i class="bi bi-x-circle"></i>
+                      <span class="label-text">Tidak Pernah</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G21]" 
+                           id="G21_tidak_tahu" 
+                           value="tidak_tahu"
+                           
+                           required>
+                    <label class="answer-label" for="G21_tidak_tahu">
+                      <i class="bi bi-question-circle"></i>
+                      <span class="label-text">Tidak Yakin</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G21]" 
+                           id="G21_sedikit_yakin" 
+                           value="sedikit_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G21_sedikit_yakin">
+                      <i class="bi bi-dash-circle"></i>
+                      <span class="label-text">Jarang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G21]" 
+                           id="G21_cukup_yakin" 
+                           value="cukup_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G21_cukup_yakin">
+                      <i class="bi bi-circle-half"></i>
+                      <span class="label-text">Kadang</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G21]" 
+                           id="G21_yakin" 
+                           value="yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G21_yakin">
+                      <i class="bi bi-circle-fill"></i>
+                      <span class="label-text">Sering</span>
+                    </label>
+                  </div>
+                                  <div class="answer-option">
+                    <input type="radio" 
+                           class="btn-check" 
+                           name="answers[G21]" 
+                           id="G21_sangat_yakin" 
+                           value="sangat_yakin"
+                           
+                           required>
+                    <label class="answer-label" for="G21_sangat_yakin">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <span class="label-text">Selalu</span>
+                    </label>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons d-flex justify-content-between align-items-center mt-5 mb-4">
+                      <div></div>
+          
+          <button type="submit" class="btn btn-nav btn-next">
+                          Selanjutnya<i class="bi bi-arrow-right ms-2"></i>
+                      </button>
+        </div>
+
+      </div>
+    </div>
+  </form>
+
+</div>
+
+<style>
+  .progress-card {
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .step-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9ecef;
+    color: #6c757d;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .step-dot.completed {
+    background-color: var(--accent-color);
+    color: white;
+  }
+  
+  .step-dot.current {
+    background-color: var(--accent-color);
+    color: white;
+    box-shadow: 0 0 0 4px rgba(0, 127, 127, 0.15);
+    transform: scale(1.1);
+  }
+  
+  .question-card {
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .question-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .question-number {
+    background-color: var(--accent-color);
+    color: white;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .question-text {
+    color: var(--heading-color);
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+  
+  .answer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  @media (max-width: 576px) {
+    .answer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .answer-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 8px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #fafafa;
+    text-align: center;
+    min-height: 80px;
+  }
+  
+  .answer-label i {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+    color: #6c757d;
+    transition: all 0.2s ease;
+  }
+  
+  .answer-label .label-text {
+    font-size: 0.75rem;
+    color: #6c757d;
+    font-weight: 500;
+  }
+  
+  .answer-label:hover {
+    border-color: var(--accent-color);
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 127, 127, 0.15);
+  }
+  
+  .answer-label:hover i,
+  .answer-label:hover .label-text {
+    color: var(--accent-color);
+  }
+  
+  .btn-check:checked + .answer-label {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 15px rgba(0, 127, 127, 0.3);
+  }
+  
+  .btn-check:checked + .answer-label i,
+  .btn-check:checked + .answer-label .label-text {
+    color: white;
+  }
+  
+  .btn-nav {
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-prev {
+    background: white;
+    border: 2px solid #e9ecef;
+    color: #6c757d;
+  }
+  
+  .btn-prev:hover {
+    background: #f8f9fa;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+  
+  .btn-next {
+    background: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 127, 127, 0.3);
+  }
+  
+  .btn-next:hover {
+    background: #005f5f;
+    border-color: #005f5f;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 127, 127, 0.4);
+  }
+</style>
+
+  </main>
+
+  <script src="frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="frontend/assets/vendor/aos/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 600,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  </script>
+  
+  
+<script src="data.js"></script>
+<script src="flow.js"></script>
+</body>
+</html>

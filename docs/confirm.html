@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Konfirmasi Screening - SchizoCheck</title>
+  <meta name="description" content="Screening Gejala Skizofrenia">
+  <meta name="keywords" content="">
+
+  <link href="frontend/assets/img/favicon.png" rel="icon">
+  <link href="frontend/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="frontend/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="frontend/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="frontend/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <link href="frontend/assets/css/main.css" rel="stylesheet">
+  
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+    }
+    
+    .screening-header {
+      background: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+    
+    .screening-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--heading-color);
+    }
+    
+    .screening-logo svg {
+      width: 32px;
+      height: 32px;
+      color: var(--accent-color);
+    }
+    
+    .screening-logo h1 {
+      font-size: 1.3rem;
+      margin: 0;
+      font-weight: 700;
+    }
+    
+    .main-content {
+      padding-top: 80px;
+      padding-bottom: 40px;
+      min-height: 100vh;
+    }
+    
+    .exit-btn {
+      color: #6c757d;
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.3s;
+    }
+    
+    .exit-btn:hover {
+      color: var(--accent-color);
+    }
+  </style>
+</head>
+
+<body class="screening-page">
+
+  <!-- Minimal Header -->
+  <header class="screening-header">
+    <div class="container d-flex justify-content-center align-items-center">
+      <a href="" class="screening-logo" onclick="return confirm('Apakah Anda yakin ingin keluar? Progress screening tidak akan disimpan.')">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 22L2 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+          <path d="M17 22V6C17 4.11438 17 3.17157 16.4142 2.58579C15.8284 2 14.8856 2 13 2H11C9.11438 2 8.17157 2 7.58579 2.58579C7 3.17157 7 4.11438 7 6V22" stroke="currentColor" stroke-width="1.5"></path>
+        </svg>
+        <h1>SchizoCheck</h1>
+      </a>
+    </div>
+  </header>
+
+  <main class="main-content">
+    
+<div class="container">
+  <div class="row justify-content-center align-items-center" style="min-height: calc(100vh - 120px);">
+    <div class="col-lg-6 col-md-8">
+      
+      <div class="confirm-card text-center p-5 bg-white rounded-4 shadow" data-aos="zoom-in">
+        
+        <!-- Icon -->
+        <div class="confirm-icon mb-4">
+          <div class="icon-circle mx-auto" style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--accent-color) 0%, #004d4d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <i class="bi bi-clipboard-check" style="font-size: 3rem; color: white;"></i>
+          </div>
+        </div>
+        
+        <!-- Title -->
+        <h2 class="mb-3" style="color: var(--heading-color);">Siap Memulai Screening?</h2>
+        
+        <!-- User Info -->
+        <div class="user-info mb-4 p-3 rounded-3" style="background: #f8f9fa;">
+          <p class="mb-0 text-muted">
+            <i class="bi bi-person-circle me-2"></i>
+            Halo, <strong style="color: var(--accent-color);">Pengunjung Demo</strong>
+          </p>
+        </div>
+        
+        <!-- Instructions -->
+        <div class="instructions text-start mb-4 p-4 rounded-3" style="background: #fff8e1; border-left: 4px solid #ffc107;">
+          <h6 class="mb-3 d-flex align-items-center" style="color: #856404;">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            Petunjuk Penting
+          </h6>
+          <ul class="mb-0 ps-3" style="color: #856404;">
+            <li class="mb-2">Jawab setiap pertanyaan dengan <strong>jujur</strong> sesuai kondisi yang Anda alami</li>
+            <li class="mb-2">Tidak ada jawaban yang benar atau salah</li>
+            <li class="mb-2">Hasil akurat bergantung pada kejujuran jawaban Anda</li>
+            <li class="mb-0">Selesaikan <strong>semua pertanyaan</strong> untuk mendapatkan hasil diagnosis</li>
+          </ul>
+        </div>
+        
+        <!-- Statistics -->
+        <div class="row g-3 mb-4">
+          <div class="col-4">
+            <div class="stat-item p-3 rounded-3" style="background: #f0f9f9;">
+              <i class="bi bi-list-check d-block mb-1" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+              <strong style="color: var(--heading-color);">17</strong>
+              <small class="d-block text-muted">Pertanyaan</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="stat-item p-3 rounded-3" style="background: #f0f9f9;">
+              <i class="bi bi-clock d-block mb-1" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+              <strong style="color: var(--heading-color);">5-10</strong>
+              <small class="d-block text-muted">Menit</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="stat-item p-3 rounded-3" style="background: #f0f9f9;">
+              <i class="bi bi-layers d-block mb-1" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+              <strong style="color: var(--heading-color);">5</strong>
+              <small class="d-block text-muted">Tahap</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Confirmation Question -->
+        <p class="mb-4 fw-medium" style="color: var(--heading-color);">
+          Apakah Anda yakin ingin melanjutkan?
+        </p>
+        
+        <!-- Action Buttons -->
+        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+          <a href="screening.html" class="btn btn-outline-secondary px-4 py-2 rounded-pill">
+            <i class="bi bi-arrow-left me-2"></i>Kembali
+          </a>
+          <a href="step1.html" class="btn btn-primary px-5 py-2 rounded-pill" 
+             style="background-color: var(--accent-color); border-color: var(--accent-color);">
+            Ya, Mulai Sekarang<i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<style>
+  .confirm-card {
+    animation: fadeInUp 0.6s ease;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .icon-circle {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(0, 127, 127, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 15px rgba(0, 127, 127, 0);
+    }
+  }
+</style>
+
+  </main>
+
+  <script src="frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="frontend/assets/vendor/aos/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 600,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  </script>
+  
+  
+<script src="flow.js"></script>
+</body>
+</html>
