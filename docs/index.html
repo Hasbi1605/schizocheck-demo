@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SchizoCheck — Demo Interaktif Skrining Skizofrenia</title>
+<meta name="description" content="Demo interaktif sistem pakar skrining awal skizofrenia dengan metode Certainty Factor dan Forward Chaining. Port JavaScript dari aplikasi Laravel SchizoCheck oleh Muhammad Hasbi Ash Shiddiqi.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div>
+        <div class="brand-name">SchizoCheck</div>
+        <div class="brand-sub">Sistem Pakar Skrining Awal Skizofrenia</div>
+      </div>
+    </div>
+    <a class="btn btn-ghost" href="https://github.com/Hasbi1605/ES-Skizofrenia" target="_blank" rel="noopener">Kode Sumber (Laravel)</a>
+  </div>
+</header>
+
+<div class="demo-banner">
+  <div class="wrap">
+    <strong>Demo Interaktif</strong> — versi port JavaScript dari aplikasi Laravel aslinya.
+    Seluruh perhitungan Certainty Factor berjalan 100% di browser Anda; tidak ada data yang dikirim atau disimpan di server.
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- STEP 0: INTRO -->
+  <section id="view-intro" class="view active">
+    <div class="hero card">
+      <h1>Skrining Awal Skizofrenia Berbasis Sistem Pakar</h1>
+      <p>SchizoCheck membantu mengenali indikasi awal gangguan skizofrenia melalui 30 pertanyaan gejala
+         yang dikelompokkan dalam 6 kategori. Jawaban Anda diolah dengan metode <em>Certainty Factor</em>
+         dan penalaran <em>Forward Chaining</em> menggunakan basis pengetahuan pakar
+         (referensi PPDGJ-III, ICD-10 F20.0–F20.2, DSM-5, dan skala PANSS).</p>
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">30</span><span class="stat-label">Gejala diperiksa</span></div>
+        <div class="stat"><span class="stat-num">6</span><span class="stat-label">Kategori gejala</span></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Kemungkinan hasil</span></div>
+        <div class="stat"><span class="stat-num">47</span><span class="stat-label">Aturan pakar (CF)</span></div>
+      </div>
+      <button class="btn btn-primary btn-lg" onclick="goBiodata()">Mulai Skrining</button>
+      <p class="disclaimer">Hasil skrining ini <strong>bukan diagnosis medis</strong> dan tidak menggantikan
+         penilaian psikiater atau psikolog klinis. Bila Anda atau orang terdekat mengalami gejala yang
+         mengganggu, segera hubungi profesional kesehatan mental.</p>
+    </div>
+    <div class="card">
+      <h2>Cara kerja</h2>
+      <ol class="howto">
+        <li><strong>Isi data diri</strong> — hanya dipakai untuk menampilkan ringkasan hasil di halaman ini.</li>
+        <li><strong>Jawab 30 pertanyaan</strong> dalam 6 langkah, sesuai tingkat keyakinan Anda: Tidak, Tidak Tahu, Sedikit Yakin, Cukup Yakin, Yakin, atau Sangat Yakin.</li>
+        <li><strong>Mesin menghitung CF</strong> — setiap jawaban yang meyakinkan mengaktifkan aturan pakar terkait (forward chaining), lalu nilai CF digabungkan untuk 5 kemungkinan hasil.</li>
+        <li><strong>Lihat hasil &amp; rincian</strong> — termasuk gejala mana saja yang paling berkontribusi pada setiap hasil.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- STEP 1: BIODATA -->
+  <section id="view-biodata" class="view">
+    <div class="card">
+      <h2>Data Diri</h2>
+      <p class="muted">Data ini hanya ditampilkan pada ringkasan hasil di browser Anda dan tidak dikirim ke mana pun.</p>
+      <form id="form-biodata" onsubmit="return submitBiodata(event)">
+        <label>Nama lengkap<input name="name" required maxlength="255" autocomplete="name"></label>
+        <label>Umur<input name="age" type="number" min="1" max="120" required></label>
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        <label>Alamat<textarea name="address" rows="2" required></textarea></label>
+        <label>Nomor telepon<input name="phone" type="tel" required autocomplete="tel"></label>
+        <div class="nav-row">
+          <button type="button" class="btn btn-ghost" onclick="showView('intro')">Kembali</button>
+          <button type="submit" class="btn btn-primary">Lanjut</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- STEP 2: CONFIRM -->
+  <section id="view-confirm" class="view">
+    <div class="card">
+      <h2>Siap Memulai?</h2>
+      <div id="confirm-summary" class="summary-box"></div>
+      <p>Anda akan menjawab 30 pertanyaan dalam 6 langkah. Jawablah sejujur mungkin berdasarkan
+         kondisi yang Anda rasakan dalam beberapa waktu terakhir.</p>
+      <div class="nav-row">
+        <button class="btn btn-ghost" onclick="showView('biodata')">Kembali</button>
+        <button class="btn btn-primary" onclick="startQuestions()">Mulai Pertanyaan</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 3: QUESTIONS -->
+  <section id="view-questions" class="view">
+    <div class="card">
+      <div class="progress-head">
+        <span id="step-label"></span>
+        <span id="step-count"></span>
+      </div>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+      <h2 id="kategori-title"></h2>
+      <p class="muted">Seberapa yakin Anda mengalami hal berikut?</p>
+      <div id="question-list"></div>
+      <p id="question-error" class="error-text" hidden>Jawab semua pertanyaan pada langkah ini dulu ya.</p>
+      <div class="nav-row">
+        <button class="btn btn-ghost" id="btn-prev-step" onclick="prevStep()">Kembali</button>
+        <button class="btn btn-primary" id="btn-next-step" onclick="nextStep()">Lanjut</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 4: RESULT -->
+  <section id="view-result" class="view">
+    <div class="card" id="result-main"></div>
+    <div class="card">
+      <h2>Semua Kemungkinan Hasil</h2>
+      <div id="result-all"></div>
+    </div>
+    <div class="card">
+      <h2>Rincian Perhitungan</h2>
+      <p class="muted">Klik nama hasil untuk melihat gejala yang berkontribusi beserta nilai CF pakar × CF jawaban Anda.</p>
+      <div id="result-details"></div>
+      <div class="nav-row">
+        <button class="btn btn-primary" onclick="restart()">Ulangi Skrining</button>
+        <a class="btn btn-ghost" href="https://github.com/Hasbi1605/ES-Skizofrenia" target="_blank" rel="noopener">Lihat Aplikasi Aslinya (Laravel)</a>
+      </div>
+      <p class="disclaimer">Hasil ini adalah skrining awal berbasis aturan pakar, <strong>bukan diagnosis medis</strong>.
+         Untuk penilaian yang valid, berkonsultasilah dengan psikiater.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    SchizoCheck — proyek portofolio <a href="https://portofolio-hasbi.web.id" target="_blank" rel="noopener">Muhammad Hasbi Ash Shiddiqi</a>.
+    Demo ini adalah port front-end dari aplikasi Laravel 11 aslinya; basis pengetahuan &amp; rumus CF identik dengan versi server.
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
